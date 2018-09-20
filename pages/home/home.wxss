@@ -1,0 +1,104 @@
+/* pages/home/home.wxss */
+/* page 背景 */
+.home-bg{
+  /* 生成固定定位的元素，相对于浏览器窗口进行定位。 */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(224, 222, 222);
+  display: flex;
+  flex-direction: column;
+}
+/* 头部 */
+.home-hd{
+  padding:5px 5px;
+  text-align: center;
+  background: white;
+  height: 5%;
+}
+/* 头部内容区 */
+.home-hd-content{
+  padding:3px 10px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(216, 216, 247),rgb(71, 71, 241));
+  border-radius: 15px;
+  display: inline;
+  color: white;
+  font-size: 14px;
+}
+/* 头部内容图片 */
+.home-hd-content-image{
+  width:14px;
+  height:14px;
+  margin-right: 5px;
+}
+.home-center-content-view{
+  padding: 5px 30px 40px 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+}
+.home-center-warning-title{
+  font-size: 11px;
+  color: gray;
+}
+.home-center-logo-image{
+  width: 120px;
+  height: 40px;
+  margin: 50px auto 30px;
+}
+.home-center-progress-image{
+  width: 100%;
+  height: 40px;
+}
+.home-button-area{
+  background: white;
+  height: 50%;
+  align-items: center;
+  border-top-left-radius: 45%;
+  border-top-right-radius: 45%;
+  margin-top: 40px;
+}
+.home-scanner-button-area{
+  width: 100%;
+  height: 75%;
+  align-items: center;
+}
+.home-scanner-button{
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to right, rgb(216, 216, 247),rgb(71, 71, 241));
+  align-items: center;
+  border-radius: 50px;
+}
+.home-scanner-button-image{
+  width: 50px;
+  height: 50px;
+  margin: 25px 25px;
+}
+.home-bottom-button-area{
+  width: 100%;
+  height: 25%;
+}
+.home-bottom-button-left{
+  margin-left: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float:left;
+  width: 30px;
+  height: 30px;
+}
+.home-bottom-button-right{
+  margin-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float: right;
+  width: 30px;
+  height: 30px;
+}
+.home-bottom-button-image{
+  width: 30px;
+  height: 30px;
+}

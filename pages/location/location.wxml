@@ -1,0 +1,24 @@
+<!--pages/location/location.wxml-->
+<view class='page-box'>
+  <!-- head -->
+  <view class='page-head'>
+    <view class='page-head-content'>
+      <image class='page-head-content-image' src='../../resource/location_image.png'></image>
+      {{scannerAuto?"true":"false"}}
+    </view>
+  </view>
+  <view class='page-list-box'>
+    <view class='page-list-item' wx:for="{{loactionList}}" wx:key="locationid" id="{{index}}">
+      <view class='page-list-item-left' bindtap='selectLocation' id="{{index}}">
+        <text class='page-list-item-addressname'>{{item.addressName}}</text>
+        <text class='page-list-item-addressdetail'>{{item.addressDetail}}</text>
+        <text class='page-list-item-addressdistance'>{{item.addressDistance}}</text>
+      </view>
+      <view class='page-list-item-right' bindtap='showInMap' id="{{index}}">
+        <view class='page-list-item-image-box'>
+          <image class='page-list-item-locationimage' src='../../resource/location_map_image.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

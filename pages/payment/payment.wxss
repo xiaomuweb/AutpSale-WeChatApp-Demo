@@ -1,0 +1,26 @@
+/* pages/payment/payment.wxss */
+.page-box{
+  /* 生成固定定位的元素，相对于浏览器窗口进行定位。 */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(224, 222, 222);
+  display: table;
+}
+.page-content-box{
+  display: table-cell;
+  /* vertical-align: middle; */
+}
+.page-content-show{
+  margin: 40px 10px;
+  height: 50%;
+  background: white;
+}
+.page-content-title{
+  text-align: center;
+  font-size: 15px;
+}
+.page-content-amount{
+  text-align: center;
+  font-size: 23px;
+}

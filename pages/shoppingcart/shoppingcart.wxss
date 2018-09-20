@@ -1,0 +1,221 @@
+/* pages/shoppingcart/shoppingcart.wxss */
+.page-box{
+  /* 生成固定定位的元素，相对于浏览器窗口进行定位。 */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(224, 222, 222);
+  display: flex;
+  flex-direction: column;
+}
+.page-head{
+  padding:5px 5px;
+  text-align: center;
+  background: white;
+  height: 5%;
+}
+.page-head-content{
+  padding:3px 10px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(216, 216, 247),rgb(71, 71, 241));
+  border-radius: 15px;
+  display: inline;
+  color: white;
+  font-size: 14px;
+}
+.page-head-content-image{
+  width:14px;
+  height:14px;
+  margin-right: 5px;
+}
+.page-list-empty-box{
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: lightcyan;
+}
+.page-list-empty-image-box{
+  /* height: 50%; */
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.page-list-empty-image{
+  height: 200px;
+  width: 200px;
+}
+.page-list-empty-title{
+  text-align: center;
+  font-size: 17px;
+  color: lightpink;
+}
+.page-list-box{
+  height: 70%;
+  padding: 5px atuo;
+  background: lightblue;
+}
+.page-list-item{
+  margin: 10px 10px;
+  height: 60px;
+  background: lightgoldenrodyellow;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.page-list-item-top{
+  height: 50%;
+  display: float;
+}
+.page-list-item-goodsname{
+  padding: 5px 10px;
+  float: left;
+  font-size: 15px;
+  font-family: "Microsoft YaHei";
+}
+.page-list-item-goodscount-box{
+  padding: 5px 8px;
+  float: right;
+  display: flex;
+  flex-direction: row;
+  
+}
+.page-list-item-goodscount-button{
+  height: 20px;
+  width: 20px;
+  margin: auto 0px;
+}
+.page-list-item-goodscount-number{
+  font-size: 15px;
+  font-family: "Microsoft YaHei";
+  height: 20px;
+  text-align: center;
+  margin: 0px 10px;
+}
+.page-list-itme-bottom{
+  height: 50%;
+  background: green;
+  display: float;
+}
+.page-list-item-price{
+  padding: 5px 10px;
+  font-size: 15px;
+  font-family: "Microsoft YaHei";
+  float:left;
+}
+.page-list-item-amount{
+  padding: 5px 8px;
+  font-size: 15px;
+  font-family: "Microsoft YaHei";
+  float: right;
+}
+.page-bottom-box{
+  /* width: 100%; */
+  height: 25%;
+  background: lightcoral;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+}
+.page-bottom-scanner-box{
+  /* width: 100%; */
+  height: 70%;
+  background: lightgrey;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+}
+.page-bottom-scanner-left{
+  height: 100%;
+  width: 5%;
+  background: lightpink;
+}
+.page-bottom-scanner-continuityscanner{
+  height: 100%;
+  width: 30%;
+  background: lightblue;
+  display: table;
+}
+.page-bottom-scanner-continuityscanner-content{
+  height: 50%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.page-bottom-scanner-continuityscanner-switch{
+  display: inline-block;
+  text-align: center;
+}
+.page-bottom-scanner-continuityscanner-title{
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+.page-bottom-scanner-scanner{
+  height: 100%;
+  width: 30%;
+  background: lightgoldenrodyellow;
+}
+.page-bottom-scanner-inputcode{
+  height: 100%;
+  width: 30%;
+  background: lightgreen;
+  display: table;
+}
+.page-bottom-scanner-inputcode-content{
+  height: 50%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.page-bottom-scanner-inputcode-image-content{
+  display: inline-block;
+  text-align: center;
+}
+.page-bottom-scanner-inputcode-image{
+  width: 25px;
+  height: 25px;
+}
+.page-bottom-scanner-inputcode-title{
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+.page-bottom-scanner-right{
+  height: 100%;
+  width: 5%;
+  background: lightslategray;
+}
+.page-bottom-pay-box{
+  width: 100%;
+  height: 30%;
+  background: lightcyan;
+  display: float;
+}
+.page-bottom-pay-amount{
+  float:left;
+  display: table;
+}
+.page-bottom-pay-amount-text{
+  padding: 5px 10px;
+  color: red;
+  font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.page-bottom-pay-paybutton{
+  float: right;
+  display: table;
+}
+.page-bottom-pay-paybutton-text{
+  padding: 5px 10px;
+  color: red;
+  font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}

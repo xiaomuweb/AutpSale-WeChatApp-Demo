@@ -1,0 +1,88 @@
+/* pages/location/location.wxss */
+.page-box{
+  /* 生成固定定位的元素，相对于浏览器窗口进行定位。 */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(224, 222, 222);
+  display: flex;
+  flex-direction: column;
+}
+.page-head{
+  padding:5px 5px;
+  text-align: center;
+  background: white;
+  height: 5%;
+}
+.page-head-content{
+  padding:3px 10px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(216, 216, 247),rgb(71, 71, 241));
+  border-radius: 15px;
+  display: inline;
+  color: white;
+  font-size: 14px;
+}
+.page-head-content-image{
+  width:14px;
+  height:14px;
+  margin-right: 5px;
+}
+.page-list-box{
+  height: 95%;
+  padding: 5px atuo;
+  background: lightblue;
+}
+.page-list-item{
+  margin: 10px 10px;
+  padding: 5px 10px;
+  height: 70px;
+  background: lightgoldenrodyellow;
+  display: float;
+  border-radius: 8px;
+}
+.page-list-item-left{
+  max-width: 90%;
+  float: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  align-content: space-between;
+  line-height: 25px;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.page-list-item-addressname{
+  /* height: 40%; */
+  font-size: 18px;
+  color: black;
+}
+.page-list-item-addressdetail{
+  /* height: 30%; */
+  font-size: 14px;
+  color: gray;
+}
+.page-list-item-addressdistance{
+  /* height: 30%; */
+  font-size: 12px;
+  color:lightgray;
+}
+.page-list-item-right{
+  float: right;
+  height: 100%;
+  width: 10%;
+  display: table;
+  text-align: center;
+}
+.page-list-item-image-box{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.page-list-item-locationimage{
+  height: 20px;
+  width: 20px;
+}

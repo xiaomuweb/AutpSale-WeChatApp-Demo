@@ -1,0 +1,8 @@
+<!--pages/payment/payment.wxml-->
+<view class='page-box'>
+  <view class='page-content-box'>
+    <view class='page-content-show'>
+    
+    </view>
+  </view>
+</view>

@@ -1,0 +1,75 @@
+<!--pages/shoppingcart/shoppingcart.wxml-->
+<!-- page -->
+<view class='page-box'>
+  <!-- head -->
+  <view class='page-head'>
+    <view class='page-head-content'>
+      <image class='page-head-content-image' src='../../resource/location_image.png'></image>
+      {{scannerAuto?"true":"false"}}
+    </view>
+  </view>
+  <!-- list -->
+  <view class='page-list-empty-box' wx:if="{{shoppingcartlist.length <= 0}}">
+    <view class='page-list-empty-image-box'>
+      <image class='page-list-empty-image' src='../../resource/empty_image.png'></image>
+    </view>
+    <view class='page-list-empty-title'>购物车空了，请选购商品</view>
+  </view>
+  <scroll-view class='page-list-box' scroll-y="true" wx:else>
+    <view class='page-list-item' wx:for="{{shoppingcartlist}}" wx:key="goodsCode">
+      <view class='page-list-item-top'>
+        <view class='page-list-item-goodsname'>{{item.goodsName}}</view>
+        <view class='page-list-item-goodscount-box'>
+          <image class='page-list-item-goodscount-button' src='../../resource/reduce_image.png' bindtap='reduceCount' id='{{index}}'></image>
+          <text class='page-list-item-goodscount-number'>{{item.count}}</text>
+          <image class='page-list-item-goodscount-button' src='../../resource/add_image.png' bindtap='addCount' id='{{index}}'></image>
+        </view>
+      </view>
+      <view class='page-list-item-bottom'>
+        <view class='page-list-item-price'>单价：￥{{item.price}}</view>
+        <view class='page-list-item-amount'>总计：￥{{item.price * item.count}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- bottom -->
+  <view class='page-bottom-box'>
+    <!-- scanner -->
+    <view class="page-bottom-scanner-box">
+      <view class='page-bottom-scanner-left'></view>
+      <view class='page-bottom-scanner-continuityscanner'>
+        <view class='page-bottom-scanner-continuityscanner-content'>
+          <view class='page-bottom-scanner-continuityscanner-switch'>
+            <switch bindchange='changeContinuityscanner'></switch>
+          </view>
+          <view class='page-bottom-scanner-continuityscanner-title'>
+            连续扫码
+          </view>
+        </view>
+      </view>
+      <view class='page-bottom-scanner-scanner' bindtap='startScannerCode'>
+        扫码
+      </view>
+      <view class='page-bottom-scanner-inputcode'>
+        <view class='page-bottom-scanner-inputcode-content'>
+          <view class='page-bottom-scanner-inputcode-image-content' bindtap='inputcode'>
+            <image class='page-bottom-scanner-inputcode-image' src='../../resource/inputcode_image.png'>
+            </image>
+            <view class='page-bottom-scanner-inputcode-title'>
+              手动输入
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='page-bottom-scanner-right'></view>
+    </view>
+    <!-- pay -->
+    <view class='page-bottom-pay-box'>
+      <view class='page-bottom-pay-amount'>
+        <view class='page-bottom-pay-amount-text'>￥{{amount}}</view>
+      </view>
+      <view class='page-bottom-pay-paybutton' bindtap='payTheBill'>
+        <view class='page-bottom-pay-paybutton-text'>结算</view>
+      </view>
+    </view>
+  </view>
+</view>

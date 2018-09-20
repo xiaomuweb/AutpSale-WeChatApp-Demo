@@ -1,0 +1,43 @@
+/* pages/inputcode/inputcode.wxss */
+.inputcode-page{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-barcode-box{
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.page-barcode-image{
+  height: 100px;
+  width: 200px;
+  margin:10px auto;
+}
+.page-barcode-title{
+  text-align: center;
+  font-size: 15px;
+  color: red;
+  margin-top: 10px;
+}
+.page-barcode-input{
+  margin: 10px 20px;
+  text-align: center;
+  height: 50px;
+  border-radius: 5px;
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
+}
+.page-barcode-input-placehold{
+  color: lightgray;
+}
+.page-barcode-submitbutton{
+  margin: 5px 20px;
+  background: limegreen;
+  color: white;
+}
