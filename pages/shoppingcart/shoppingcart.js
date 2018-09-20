@@ -1,4 +1,5 @@
 // pages/shoppingcart/shoppingcart.js
+var app = getApp();
 Page({
 
   /**
@@ -22,7 +23,8 @@ Page({
     ], // 购物车列表
     amount:0, // 购物车总金额
     currentGetBarCode:"", // 当前获取到的条形码编号 可以通过扫码获取 和 手动输入获取
-    scannerAuto:true
+    scannerAuto:true,
+    address:"",
   },
 
   /**
@@ -35,8 +37,24 @@ Page({
     this.setData({
       scannerAuto:scannerAuto
     })
+    this.loadAddress();
   },
-
+  loadAddress: function () {
+    // app 的 地址是否已经加载
+    if (app.globalData.address) {
+      // 已经加载 赋值
+      this.setData({
+        address: app.globalData.address
+      })
+    } else {
+      // 延后加载 重写 app.js 中的 回调方法 获取回调数据
+      app.addressReadyCallback = res => {
+        this.setData({
+          address: res
+        })
+      }
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -92,7 +110,7 @@ Page({
   },
   payTheBill:function(){
     wx.navigateTo({
-      url: '../payment/payment?amount={{this.amount}}',
+        url: '../payment/payment?amount=' + this.data.amount,
     })
   },
   inputcode:function(){
@@ -172,6 +190,15 @@ Page({
           that.startScannerCode();
         }
       }
+    })
+  },
+  jumpLocationList: function () {
+    console.log("跳转地址列表");
+    wx.navigateTo({
+      url: '../location/location',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   }
 })

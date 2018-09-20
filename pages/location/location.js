@@ -1,7 +1,6 @@
 // pages/location/location.js
-// 引入SDK核心类
-var QQMapWX = require('../../libs/qqmap-wx-jssdk1.0/qqmap-wx-jssdk.js');
-var qqmapsdk;
+
+var app = getApp();
 Page({
 
   /**
@@ -33,16 +32,32 @@ Page({
         latitude: 28.674680,
         longitude: 115.993401,
       },
-    ]
+    ],
+    address:"",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.loadAddress();
   },
-
+  loadAddress: function () {
+    // app 的 地址是否已经加载
+    if (app.globalData.address) {
+      // 已经加载 赋值
+      this.setData({
+        address: app.globalData.address
+      })
+    } else {
+      // 延后加载 重写 app.js 中的 回调方法 获取回调数据
+      app.addressReadyCallback = res => {
+        this.setData({
+          address: res
+        })
+      }
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

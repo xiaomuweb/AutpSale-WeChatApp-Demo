@@ -3,9 +3,9 @@
 <view class='page-box'>
   <!-- head -->
   <view class='page-head'>
-    <view class='page-head-content'>
+    <view class='page-head-content' bindtap='jumpLocationList'>
       <image class='page-head-content-image' src='../../resource/location_image.png'></image>
-      {{scannerAuto?"true":"false"}}
+      {{address}}
     </view>
   </view>
   <!-- list -->
@@ -39,7 +39,7 @@
       <view class='page-bottom-scanner-continuityscanner'>
         <view class='page-bottom-scanner-continuityscanner-content'>
           <view class='page-bottom-scanner-continuityscanner-switch'>
-            <switch bindchange='changeContinuityscanner'></switch>
+            <switch class="wx-switch-input" bindchange='changeContinuityscanner'></switch>
           </view>
           <view class='page-bottom-scanner-continuityscanner-title'>
             连续扫码

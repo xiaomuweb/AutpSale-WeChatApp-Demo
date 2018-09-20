@@ -1,8 +1,8 @@
 <!--pages/payment/payment.wxml-->
 <view class='page-box'>
   <view class='page-content-box'>
-    <view class='page-content-show'>
-    
-    </view>
+    <view class='page-content-title'>请确认支付金额</view>
+    <view class='page-content-amount'>{{amount}}</view>
+    <button type='primary' class='page-content-submitbutton' bindtap='payTheBill'>确定支付</button>
   </view>
 </view>

@@ -4,7 +4,7 @@
   <view class='page-head'>
     <view class='page-head-content'>
       <image class='page-head-content-image' src='../../resource/location_image.png'></image>
-      {{scannerAuto?"true":"false"}}
+      {{address}}
     </view>
   </view>
   <view class='page-list-box'>

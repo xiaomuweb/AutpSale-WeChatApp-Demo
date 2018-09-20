@@ -1,7 +1,5 @@
 // pages/home/home.js
-// 引入SDK核心类
-var QQMapWX = require('../../libs/qqmap-wx-jssdk1.0/qqmap-wx-jssdk.js');
-var qqmapsdk;
+const app = getApp()
 Page({
 
   /**
@@ -15,7 +13,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getLocation();
+    this.loadAddress();
+  },
+  loadAddress:function(){
+    // app 的 地址是否已经加载
+    if (app.globalData.address) {
+      // 已经加载 赋值
+      this.setData({
+        address: app.globalData.address
+      })
+    } else {
+      // 延后加载 重写 app.js 中的 回调方法 获取回调数据
+      app.addressReadyCallback = res => {
+        this.setData({
+          address: res
+        })
+      }
+    }
   },
 
   /**
@@ -65,36 +79,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  getLocation:function(){
-    var that = this;
-    // 实例化API核心类
-    qqmapsdk = new QQMapWX({
-      key: 'QUIBZ-EKGR2-FMWUD-CTYVT-6Z5LZ-MPBCJ'
-    });
-    wx.getLocation({
-      type: "gcj02",
-      success: function (res) {
-        console.log("------------ home onload ------------");
-        console.log(res);
-        const latitude = res.latitude;
-        const longitude = res.longitude;
-        qqmapsdk.reverseGeocoder({
-          location: {
-            latitude: latitude,
-            longitude: longitude
-          },
-          success: function (addressRes) {
-            console.log("----------- 地理位置解析 -------------");
-            console.log(addressRes);
-            var addressStr = addressRes.result.formatted_addresses.recommend;
-            that.setData({
-              address: addressStr
-            })
-          },
-        })
-      },
-    })
   },
   scanner:function(){
     wx.navigateTo({

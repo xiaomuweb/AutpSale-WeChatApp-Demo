@@ -148,6 +148,25 @@
   display: inline-block;
   text-align: center;
 }
+/*swtich样式-start*/
+/*swtich整体大小*/
+.wx-switch-input{
+width:82rpx !important;
+height:40rpx !important;
+margin:0 !important;
+padding: 0 !important;
+}
+/*白色样式（false的样式）*/
+.wx-switch-input::before{
+width:80rpx !important;
+height:36rpx !important;
+}
+/*绿色样式（true的样式）*/
+.wx-switch-input::after{
+width:38rpx !important;
+height:36rpx !important;
+}
+/*swtich样式end*/
 .page-bottom-scanner-continuityscanner-title{
   text-align: center;
   font-size: 12px;

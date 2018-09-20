@@ -65,5 +65,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  payTheBill: function (){
+    
   }
 })

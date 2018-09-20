@@ -8,19 +8,38 @@
   display: table;
 }
 .page-content-box{
-  display: table-cell;
-  /* vertical-align: middle; */
-}
-.page-content-show{
-  margin: 40px 10px;
-  height: 50%;
-  background: white;
+  width: auto;
+  margin: 30rpx;
+  padding: 64rpx 30rpx;
+  background-color: #fff;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 10px;
 }
 .page-content-title{
+  margin: 10px;
   text-align: center;
   font-size: 15px;
 }
 .page-content-amount{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  position: relative;
+  display: inline-block;
+  font-size: 78rpx;
+  line-height: 1;
+}
+.page-content-amount::before{
+  content: "¥";
+  position: absolute;
+  font-size: 40rpx;
+  top: 8rpx;
+  left: -40rpx;
+}
+.page-content-submitbutton{
+  height: 50px;
+  margin: 20px 5px;
   text-align: center;
-  font-size: 23px;
+  font-size: 20px;
+  background: lightgreen;
 }
