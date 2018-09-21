@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/shoppingcart/shoppingcart",
     "pages/inputcode/inputcode",
     "pages/location/location",
-    "pages/payment/payment"
+    "pages/payment/payment",
+    "pages/cart/cart"
   ],
   "window": {
     "backgroundTextStyle": "light",

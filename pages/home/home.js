@@ -82,7 +82,7 @@ Page({
   },
   scanner:function(){
     wx.navigateTo({
-      url: '../shoppingcart/shoppingcart?startScanner=true',
+      url: '../cart/cart?startScanner=true',
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},
@@ -90,7 +90,7 @@ Page({
   },
   jumpToShoppingcart:function(){
     wx.navigateTo({
-      url: '../shoppingcart/shoppingcart?startScanner=false',
+      url: '../cart/cart?startScanner=false',
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },

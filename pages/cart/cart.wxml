@@ -1,4 +1,4 @@
-<!--pages/shoppingcart/shoppingcart.wxml-->
+<!--pages/cart/cart.wxml-->
 <!-- page -->
 <view class='page-box'>
   <!-- head -->
@@ -33,34 +33,42 @@
   </scroll-view>
   <!-- bottom -->
   <view class='page-bottom-box'>
-    <!-- scanner -->
     <view class="page-bottom-scanner-box">
-      <view class='page-bottom-scanner-left'></view>
-      <view class='page-bottom-scanner-continuityscanner'>
-        <view class='page-bottom-scanner-continuityscanner-content'>
-          <view class='page-bottom-scanner-continuityscanner-switch'>
-            <switch class="wx-switch-input" bindchange='changeContinuityscanner'></switch>
-          </view>
-          <view class='page-bottom-scanner-continuityscanner-title'>
-            连续扫码
+      <view class='page-bottom-scanner-scanner-box'>
+        <view class='page-bottom-scanner-scanner'>
+          <view class='page-bottom-scanner-scanner-button' bindtap='startScannerCode'>
+            <image class='page-bottom-scanner-scanner-button-image' src='../../resource/scannercode_image.png'>
+            </image>
           </view>
         </view>
       </view>
-      <view class='page-bottom-scanner-scanner' bindtap='startScannerCode'>
-        扫码
-      </view>
-      <view class='page-bottom-scanner-inputcode'>
-        <view class='page-bottom-scanner-inputcode-content'>
-          <view class='page-bottom-scanner-inputcode-image-content' bindtap='inputcode'>
-            <image class='page-bottom-scanner-inputcode-image' src='../../resource/inputcode_image.png'>
-            </image>
-            <view class='page-bottom-scanner-inputcode-title'>
-              手动输入
+        <view class='page-bottom-scanner-content-box'>
+          <view class='page-bottom-scanner-content'>
+            <view class='page-bottom-scanner-content-left'>
+              <view class='page-bottom-scanner-continuityscanner-content'>
+                <view class='page-bottom-scanner-continuityscanner-switch'>
+                  <switch class="wx-switch-input" bindchange='changeContinuityscanner'>
+                  </switch>
+                </view>
+                <view class='page-bottom-scanner-continuityscanner-title'>
+                  连续扫码
+                </view>
+              </view>
+            </view>
+            <view class='page-bottom-scanner-content-right'>
+              <view class='page-bottom-scanner-inputcode-content'>
+                <view class='page-bottom-scanner-inputcode-image-content' bindtap='inputcode'>
+                  <image class='page-bottom-scanner-inputcode-image' src='../../resource/inputcode_image.png'>
+                  </image>
+                  <view class='page-bottom-scanner-inputcode-title'>
+                    手动输入
+                  </view>
+                </view>
+              </view>
             </view>
           </view>
         </view>
-      </view>
-      <view class='page-bottom-scanner-right'></view>
+      
     </view>
     <!-- pay -->
     <view class='page-bottom-pay-box'>
@@ -68,8 +76,9 @@
         <view class='page-bottom-pay-amount-text'>￥{{amount}}</view>
       </view>
       <view class='page-bottom-pay-paybutton' bindtap='payTheBill'>
-        <view class='page-bottom-pay-paybutton-text'>结算</view>
+        <view class='page-bottom-pay-paybutton-text'>去结算</view>
       </view>
     </view>
   </view>
 </view>
+

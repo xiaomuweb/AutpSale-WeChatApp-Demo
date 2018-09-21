@@ -1,4 +1,4 @@
-// pages/shoppingcart/shoppingcart.js
+// pages/cart/cart.js
 var app = getApp();
 Page({
 
@@ -6,13 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    continuityscanner:false,// 是否连续扫码
-    shoppingcartlist:[
+    continuityscanner: false,// 是否连续扫码
+    shoppingcartlist: [
       {
-        count:3, // 数量
-        goodsName:"阿萨姆奶茶", // 商品名称
-        goodsCode:"692530373057", // 商品条码
-        price:4.5 // 价格
+        count: 3, // 数量
+        goodsName: "阿萨姆奶茶", // 商品名称
+        goodsCode: "692530373057", // 商品条码
+        price: 4.5 // 价格
       },
       {
         count: 1, // 数量
@@ -21,10 +21,10 @@ Page({
         price: 13 // 价格
       }
     ], // 购物车列表
-    amount:0, // 购物车总金额
-    currentGetBarCode:"", // 当前获取到的条形码编号 可以通过扫码获取 和 手动输入获取
-    scannerAuto:true,
-    address:"",
+    amount: 0, // 购物车总金额
+    currentGetBarCode: "", // 当前获取到的条形码编号 可以通过扫码获取 和 手动输入获取
+    scannerAuto: true,
+    address: "",
   },
 
   /**
@@ -33,9 +33,9 @@ Page({
   onLoad: function (options) {
     console.log("------------onload-----------");
     console.log(options.startScanner);
-    var scannerAuto = options.startScanner == "true"?true:false;
+    var scannerAuto = options.startScanner == "true" ? true : false;
     this.setData({
-      scannerAuto:scannerAuto
+      scannerAuto: scannerAuto
     })
     this.loadAddress();
   },
@@ -108,71 +108,71 @@ Page({
   onShareAppMessage: function () {
 
   },
-  payTheBill:function(){
+  payTheBill: function () {
     wx.navigateTo({
-        url: '../payment/payment?amount=' + this.data.amount,
+      url: '../payment/payment?amount=' + this.data.amount,
     })
   },
-  inputcode:function(){
+  inputcode: function () {
     wx.navigateTo({
       url: '../inputcode/inputcode',
     })
   },
-  changeContinuityscanner:function(){
+  changeContinuityscanner: function () {
     this.continuityscanner = !this.continuityscanner;
     this.setData({
       continuityscanner: this.continuityscanner
     })
   },
-  getAmount:function(){
+  getAmount: function () {
     var tempAmount = 0;
-    for(var i = 0; i< this.data.shoppingcartlist.length ; i++){
+    for (var i = 0; i < this.data.shoppingcartlist.length; i++) {
       var obj = this.data.shoppingcartlist[i];
       tempAmount += (obj.count * obj.price);
     }
     this.data.amount = tempAmount;
     this.setData({
-      amount:this.data.amount
+      amount: this.data.amount
     })
   },
-  reduceCount:function(obj){
+  reduceCount: function (obj) {
     console.log("reduce ==> " + obj.target.id);
     var idx = obj.target.id;
     var count = this.data.shoppingcartlist[idx].count;
-    if(count > 1){
+    if (count > 1) {
       count--;
       this.data.shoppingcartlist[idx].count = count;
       this.setData({
         shoppingcartlist: this.data.shoppingcartlist
       })
-    }else{
-      this.data.shoppingcartlist.splice(idx,1);
+    } else {
+      this.data.shoppingcartlist.splice(idx, 1);
       this.setData({
-        shoppingcartlist : this.data.shoppingcartlist
+        shoppingcartlist: this.data.shoppingcartlist
       })
     }
     this.getAmount();
   },
-  addCount:function(obj){
+  addCount: function (obj) {
     console.log("add ==> " + obj.target.id);
     const idx = obj.target.id;
     var count = this.data.shoppingcartlist[idx].count;
-    count ++;
+    count++;
     this.data.shoppingcartlist[idx].count = count;
     this.setData({
       shoppingcartlist: this.data.shoppingcartlist
     })
     this.getAmount();
   },
-  startScannerCode:function(){
+  startScannerCode: function () {
     console.log("开始扫码");
     var that = this;
     var continuityscannercode = this.continuityscanner;
     wx.scanCode({
-      success(res){
-        console.log("扫码内容 ==》 "+ res.result + "\n"); // 扫到的内容是 条形码的 条码号
+      success(res) {
+        console.log("扫码内容 ==》 " + res.result + "\n"); // 扫到的内容是 条形码的 条码号
         that.setData({
-          currentGetBarCode:res.result
+          currentGetBarCode: res.result
         })
         // console.log("扫码类型 ==》 " + res.scanType + "\n");
         // console.log("扫码字符集 ==》 " + res.charSet + "\n");

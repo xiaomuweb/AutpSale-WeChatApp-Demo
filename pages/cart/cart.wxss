@@ -1,10 +1,10 @@
-/* pages/shoppingcart/shoppingcart.wxss */
+/* pages/cart/cart.wxss */
 .page-box{
   /* 生成固定定位的元素，相对于浏览器窗口进行定位。 */
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgb(224, 222, 222);
+  background: rgb(250, 250, 250);
   display: flex;
   flex-direction: column;
 }
@@ -34,7 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: lightcyan;
+  background:  rgb(250, 250, 250);
 }
 .page-list-empty-image-box{
   /* height: 50%; */
@@ -52,9 +52,9 @@
   color: lightpink;
 }
 .page-list-box{
-  height: 70%;
+  height: 65%;
   padding: 5px atuo;
-  background: lightblue;
+  background:  rgb(250, 250, 250);
 }
 .page-list-item{
   margin: 10px 10px;
@@ -95,7 +95,6 @@
 }
 .page-list-itme-bottom{
   height: 50%;
-  background: green;
   display: float;
 }
 .page-list-item-price{
@@ -111,30 +110,51 @@
   float: right;
 }
 .page-bottom-box{
-  /* width: 100%; */
-  height: 25%;
-  background: lightcoral;
+  height: 30%;
+  background: rgb(250, 250, 250);
   display: flex;
   flex-direction: column;
-  padding: 10px 10px;
+  /* padding: 10px 10px; */
 }
 .page-bottom-scanner-box{
-  /* width: 100%; */
+  width: 100%;
   height: 70%;
-  background: lightgrey;
-  display: flex;
-  flex-direction: row;
-  padding: 10px 10px;
+  display: table;
+  position: relative;
+  vertical-align: middle;
+  
 }
-.page-bottom-scanner-left{
+.page-bottom-scanner-content-box{
   height: 100%;
-  width: 5%;
-  background: lightpink;
+  padding: 0px 20px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 1;
+}
+.page-bottom-scanner-content{
+  margin: auto;
+  height: 60px;
+  border-radius: 30px;
+  background: white;
+  display: float;
+  box-shadow: 10px 10px 5px #888888;
+}
+.page-bottom-scanner-content-left{
+  float: left;
+  height: 100%;
+  width: 45%;
+  display: table;
+}
+.page-bottom-scanner-content-right{
+  float: right;
+  height: 100%;
+  width: 45%;
+  display: table;
 }
 .page-bottom-scanner-continuityscanner{
   height: 100%;
   width: 30%;
-  background: lightblue;
   display: table;
 }
 .page-bottom-scanner-continuityscanner-content{
@@ -170,17 +190,39 @@ height:36rpx !important;
 .page-bottom-scanner-continuityscanner-title{
   text-align: center;
   font-size: 12px;
-  color: white;
+  color: black;
+}
+.page-bottom-scanner-scanner-box{
+  position: absolute;
+  height:100%;
+  width: 30%;
+  z-index: 2;
+  left: 35%;
+  display: table;
+  vertical-align: middle;
+  text-align: center;
 }
 .page-bottom-scanner-scanner{
-  height: 100%;
-  width: 30%;
-  background: lightgoldenrodyellow;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.page-bottom-scanner-scanner-button{
+  height: 80px;
+  width: 80px;
+  background:linear-gradient(to right, rgb(216, 216, 247),rgb(71, 71, 241));
+  border-radius: 40px;
+  margin: 0px auto;
+  box-shadow: 0px 5px 2px #8888888e;
+}
+.page-bottom-scanner-scanner-button-image{
+  height: 30px;
+  width: 30px;
+  margin: 25px;
 }
 .page-bottom-scanner-inputcode{
   height: 100%;
   width: 30%;
-  background: lightgreen;
   display: table;
 }
 .page-bottom-scanner-inputcode-content{
@@ -201,17 +243,12 @@ height:36rpx !important;
 .page-bottom-scanner-inputcode-title{
   text-align: center;
   font-size: 12px;
-  color: white;
-}
-.page-bottom-scanner-right{
-  height: 100%;
-  width: 5%;
-  background: lightslategray;
+  color: black;
 }
 .page-bottom-pay-box{
   width: 100%;
   height: 30%;
-  background: lightcyan;
+  background: rgb(250, 250, 250);
   display: float;
 }
 .page-bottom-pay-amount{
@@ -221,20 +258,26 @@ height:36rpx !important;
 .page-bottom-pay-amount-text{
   padding: 5px 10px;
   color: red;
-  font-size: 20px;
+  font-size: 30px;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  font-style: blod;
 }
 .page-bottom-pay-paybutton{
   float: right;
   display: table;
-}
-.page-bottom-pay-paybutton-text{
-  padding: 5px 10px;
-  color: red;
-  font-size: 20px;
-  display: table-cell;
   vertical-align: middle;
   text-align: center;
+  height: 100%;
+  background: linear-gradient(to right, rgb(195, 195, 241),rgb(71, 71, 241));
+}
+.page-bottom-pay-paybutton-text{
+  padding: 10px 10px;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  display: table-cell;
+  text-justify: bottom;
+  
 }
