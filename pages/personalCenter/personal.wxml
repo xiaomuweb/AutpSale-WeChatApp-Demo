@@ -1,0 +1,77 @@
+<!--pages/personalCenter/personal.wxml-->
+<view class='page-box'>
+  <scroll-view class='page-content-box'>
+    <view class='page-content-head-box'>
+      <image class='page-content-head-avatar' src="{{userInfo.avatarUrl}}">
+      </image>
+      <view class='page-content-head-info-box'>
+        <view class='page-content-head-info-userName'>
+          <image class='page-content-head-info-userName-logo' src='../../resource/userinfo_username-image.png'>
+          </image>
+          {{userInfo.nickName}}
+        </view>
+        <view class='page-content-head-info-level'>
+          <image class='page-content-head-info-level-logo' src='../../resource/userinfo_level_image.png'>
+          </image>
+          白银客户
+        </view>
+      </view>
+    </view>
+    <view class='page-content-item'>
+      <view class='page-content-item-left-box'>
+        <image class='page-content-item-left-logo' src='../../resource/personal_points_image.png'>
+        </image>
+        <view class='page-content-item-left-title'>
+          客户积分
+        </view>
+      </view>
+      <view class='page-content-item-right-box'>
+        <view class='page-content-item-right-title'>
+          1441分
+        </view>
+      </view>
+    </view>
+    <view class='page-content-item' bindtap='jumpToOrder'>
+      <view class='page-content-item-left-box'>
+        <image class='page-content-item-left-logo' src='../../resource/personal_order_image.png'>
+        </image>
+        <view class='page-content-item-left-title'>
+          客户订单
+        </view>
+      </view>
+      <view class='page-content-item-right-box'>
+        <view class='page-content-item-right-title'>
+          14单
+        </view>
+      </view>
+    </view>
+    <view class='page-content-item'>
+      <view class='page-content-item-left-box'>
+        <image class='page-content-item-left-logo' src='../../resource/personal_coupon_image.png'>
+        </image>
+        <view class='page-content-item-left-title'>
+          优惠券
+        </view>
+      </view>
+      <view class='page-content-item-right-box'>
+        <view class='page-content-item-right-title'>
+          3张
+        </view>
+      </view>
+    </view>
+    <view class='page-content-item'>
+      <view class='page-content-item-left-box'>
+        <image class='page-content-item-left-logo' src='../../resource/personal_service_image.png'>
+        </image>
+        <view class='page-content-item-left-title'>
+          联系客服
+        </view>
+      </view>
+      <view class='page-content-item-right-box'>
+        <view class='page-content-item-right-title'>
+          010-10010
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

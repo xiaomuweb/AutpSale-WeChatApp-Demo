@@ -6,7 +6,9 @@
   <view class='page-barcode-title'>请输入对应商品条形码编号</view>
   <!-- </view> -->
   <form bindsubmit='formSubmit'>
-    <input class='page-barcode-input' type='number' placeholder="商品条形码编号" placeholder-class='page-barcode-input-placeholder' focus='true' bindinput='inputbarcode'></input>
-    <button class='page-barcode-submitbutton' form-type='submit' disabled='{{cansubmit?false:true}}'>确定</button>
+    <input class='page-barcode-input' type='number' placeholder="商品条形码编号" placeholder-class='page-barcode-input-placeholder' focus='true' bindinput='inputbarcode'>
+    </input>
+    <button class='page-barcode-submitbutton' form-type='submit' disabled='{{cansubmit?false:true}}'>确定
+    </button>
   </form>
 </view>

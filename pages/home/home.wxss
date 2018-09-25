@@ -56,8 +56,8 @@
   background: white;
   height: 50%;
   align-items: center;
-  border-top-left-radius: 45%;
-  border-top-right-radius: 45%;
+  border-top-left-radius: 50% 25%;
+  border-top-right-radius: 50% 25%;
   margin-top: 40px;
 }
 .home-scanner-button-area{

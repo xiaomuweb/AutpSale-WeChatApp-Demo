@@ -20,7 +20,7 @@
     </view>
     <view class="home-bottom-button-area">
           <image class="home-bottom-button-left" src='../../resource/shoppingcart_image.png' bindtap='jumpToShoppingcart'></image>
-          <image class='home-bottom-button-right' src='../../resource/coupon_image.png'></image>
+          <image class='home-bottom-button-right' src='../../resource/coupon_image.png' bindtap='jumpToPersonalCenter'></image>
     </view>
   </view>
 </view>

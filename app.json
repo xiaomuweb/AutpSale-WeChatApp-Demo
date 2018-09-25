@@ -1,10 +1,14 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/home/home",
     "pages/inputcode/inputcode",
     "pages/location/location",
     "pages/payment/payment",
-    "pages/cart/cart"
+    "pages/cart/cart",
+    "pages/orderlist/orderlist",
+    "pages/orderdetail/orderdetail",
+    "pages/personalCenter/personal"
   ],
   "window": {
     "backgroundTextStyle": "light",

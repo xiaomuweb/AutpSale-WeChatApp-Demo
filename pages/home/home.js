@@ -104,5 +104,11 @@ Page({
       fail: function (res) { },
       complete: function (res) { },
     })
+  },
+  jumpToPersonalCenter:function(){
+    console.log("跳转订单列表");
+    wx.navigateTo({
+      url: '../personalCenter/personal',
+    })
   }
 })

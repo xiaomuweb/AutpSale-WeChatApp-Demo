@@ -1,0 +1,7 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view class='page-box'>
+  <scroll-view class='page-content-box' scroll-y="true">
+    <view class='page-order-list-item' wx:for="{{orderListData}}" id="{{index}}" bindtap='jumpToDetail' wx:key="{{item.orderId}}">
+    </view>
+  </scroll-view>
+</view>

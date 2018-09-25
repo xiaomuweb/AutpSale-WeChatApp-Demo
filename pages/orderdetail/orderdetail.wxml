@@ -1,0 +1,13 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<view class='page-box'>
+  <scroll-view class='page-content-box' scroll-y="true">
+    <view class='page-code-box'>
+      <view class='page-code-content-box'>
+        <canvas class='page-code-canvas' canvas-id='canvas'>
+        </canvas>
+      </view>
+    </view>
+    <view class='page-goods-list-item' wx:for="{{orderGoodsList}}" id="{{index}}">
+    </view>
+  </scroll-view>
+</view>

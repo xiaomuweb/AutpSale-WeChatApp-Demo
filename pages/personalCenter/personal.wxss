@@ -1,0 +1,84 @@
+/* pages/personalCenter/personal.wxss */
+.page-box{
+  /* 生成固定定位的元素，相对于浏览器窗口进行定位。 */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(224, 222, 222);
+  display: flex;
+  flex-direction: column;
+}
+.page-content-box{
+  width: 100%;
+  height: 100%;
+}
+.page-content-head-box{
+  height: 100px;
+  margin: 10px;
+  border-radius: 10px;
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+.page-content-head-avatar{
+  margin: 10px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+.page-content-head-info-box{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.page-content-head-info-userName{
+  font-size: 20px;
+  padding: 15px 10px 10px;
+}
+.page-content-head-info-userName-logo{
+  height: 20px;
+  width: 20px;
+}
+.page-content-head-info-level{
+  font-size: 13px;
+  padding: 15px 10px 10px;
+}
+.page-content-head-info-level-logo{
+  height: 13px;
+  width: 13px;
+}
+.page-content-item{
+  height: 50px;
+  margin: 10px;
+  display: float;
+  border-radius: 5px;
+  background: white;
+}
+.page-content-item-left-box{
+  height: 100%;
+  float: left;
+  display: float;
+}
+.page-content-item-left-logo{
+  float: left;
+  margin: 10px;
+  height: 30px;
+  width: 30px;
+}
+.page-content-item-left-title{
+  float: right;
+  margin: 14px 5px;
+  font-size: 15px;
+  color: grey;
+}
+.page-content-item-right-box{
+  height: 100%;
+  float: right;
+}
+.page-content-item-right-title{
+  font-size: 14px;
+  margin: 16px;
+  color: lightskyblue;
+}
+
