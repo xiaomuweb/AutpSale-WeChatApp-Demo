@@ -8,6 +8,14 @@
       </view>
     </view>
     <view class='page-goods-list-item' wx:for="{{orderGoodsList}}" id="{{index}}">
+      <view class='page-goods-list-item-topbox'>
+        <view class='page-goods-list-item-goodsname'>{{item.goodsname}}</view>
+        <view class='page-goods-list-item-price'>单价：{{item.goodsprice}}</view>
+      </view>
+      <view class='page-goods-list-item-bottombox'>
+        <view class='page-goods-list-item-count'>购买数量：{{item.goodscount}}</view>
+        <view class='page-goods-list-item-amount'>总金额：{{item.goodsamount}}</view>
+      </view>
     </view>
   </scroll-view>
 </view>

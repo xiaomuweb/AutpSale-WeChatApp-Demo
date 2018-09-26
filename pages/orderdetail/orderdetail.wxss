@@ -32,6 +32,37 @@
 .page-goods-list-item{
   margin: 10px;
   height: 70px;
-  background: lightpink;
+  background: white;
   border-radius: 8px;
+}
+.page-goods-list-item-topbox{
+  height: 50%;
+  display: float;
+}
+.page-goods-list-item-goodsname{
+  float: left;
+  font-size: 16px;
+  margin: 5px 10px;
+}
+.page-goods-list-item-price{
+  float: right;
+  font-size: 14px;
+  color: gray;
+  margin: 5px 10px;
+}
+.page-goods-list-item-bottombox{
+  height: 50%;
+  display: float;
+}
+.page-goods-list-item-count{
+  float: left;
+  font-size: 14px;
+  color: gray;
+  margin: 5px 10px;
+}
+.page-goods-list-item-amount{
+  float: right;
+  font-size: 14px;
+  color: red;
+  margin: 5px 10px;
 }

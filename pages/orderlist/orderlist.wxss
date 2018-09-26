@@ -16,5 +16,38 @@
   height: 100px;
   margin: 10px;
   border-radius: 10px;
-  background: lightseagreen;
+  background: white;
+}
+.page-order-list-item-topbox{
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.page-order-list-item-address-logo-box{
+  padding: 10px;
+}
+.page-order-list-item-address-logo{
+  height: 30px;
+  width: 30px;
+}
+.page-order-list-item-address{
+  font-size: 14px;
+  color: gray;
+  margin: 16px 10px;
+}
+.page-order-list-item-bottombox{
+  height: 50px;
+  display: float;
+}
+.page-order-list-item-time{
+  float: left;
+  color: lightgray;
+  font-size: 12px;
+  margin: 18px 10px;
+}
+.page-order-list-item-amount{
+  float: right;
+  color: red;
+  font-size: 14px;
+  margin: 18px 10px;
 }

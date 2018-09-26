@@ -9,22 +9,26 @@ Page({
     orderListData:[
       {
         orderId:"www.baidu.com",
-        orderTime:"2018-09-12",
-        orderAddress:"江西省南昌市青山湖区北京东路天虹",
+        orderTime:"2018-09-12 09:33:23",
+        orderAmount:240.3,
+        orderAddress:"江西省南昌市青山湖区北京东路天虹北京东路天虹",
       },
       {
         orderId: "www.code4app.com",
-        orderTime: "2018-09-12",
+        orderTime: "2018-09-12 09:33:23",
+        orderAmount: 240.3,
         orderAddress: "江西省南昌市青山湖区北京东路天虹",
       },
       {
         orderId: "www.github.com",
-        orderTime: "2018-09-12",
+        orderTime: "2018-09-12 09:33:23",
+        orderAmount: 240.3,
         orderAddress: "江西省南昌市青山湖区北京东路天虹",
       },
       {
         orderId: "www.csdn.com",
-        orderTime: "2018-09-12",
+        orderTime: "2018-09-12 09:33:23",
+        orderAmount: 240.3,
         orderAddress: "江西省南昌市青山湖区北京东路天虹",
       },
     ],
@@ -87,7 +91,7 @@ Page({
   },
   jumpToDetail:function(res){
     console.log(res);
-    var idx = res.target.id;
+    var idx = res.currentTarget.id;
     var obj = this.data.orderListData[idx];
     wx.navigateTo({
       url: '../orderdetail/orderdetail?orderId='+obj.orderId,

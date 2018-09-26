@@ -2,6 +2,16 @@
 <view class='page-box'>
   <scroll-view class='page-content-box' scroll-y="true">
     <view class='page-order-list-item' wx:for="{{orderListData}}" id="{{index}}" bindtap='jumpToDetail' wx:key="{{item.orderId}}">
+      <view class='page-order-list-item-topbox'>
+        <view class='page-order-list-item-address-logo-box'>
+          <image class='page-order-list-item-address-logo' src='../../resource/location_map_image.png'></image>
+        </view>
+        <view class='page-order-list-item-address'>购买地点：{{item.orderAddress}}</view>
+      </view>
+      <view class='page-order-list-item-bottombox'>
+        <view class='page-order-list-item-time'>{{item.orderTime}}</view>
+        <view class='page-order-list-item-amount'>总金额：{{item.orderAmount}}</view>
+      </view>
     </view>
   </scroll-view>
 </view>

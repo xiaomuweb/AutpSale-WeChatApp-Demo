@@ -59,7 +59,7 @@
         </view>
       </view>
     </view>
-    <view class='page-content-item'>
+    <view class='page-content-item' bindtap='callService'>
       <view class='page-content-item-left-box'>
         <image class='page-content-item-left-logo' src='../../resource/personal_service_image.png'>
         </image>
@@ -69,7 +69,7 @@
       </view>
       <view class='page-content-item-right-box'>
         <view class='page-content-item-right-title'>
-          010-10010
+          {{servicePhoneNumber}}
         </view>
       </view>
     </view>

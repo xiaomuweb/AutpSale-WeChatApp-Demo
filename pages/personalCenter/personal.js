@@ -9,6 +9,7 @@ Page({
    */
   data: {
     userInfo:{},
+    servicePhoneNumber:"010-10010",
   },
 
   /**
@@ -84,6 +85,12 @@ Page({
   jumpToOrder:function(){
     wx.navigateTo({
       url: '../orderlist/orderlist',
+    })
+  },
+  callService:function(){
+    var that = this;
+    wx.makePhoneCall({
+      phoneNumber: that.data.servicePhoneNumber,
     })
   }
 })
