@@ -109,9 +109,11 @@ Page({
 
   },
   payTheBill: function () {
-    wx.navigateTo({
-      url: '../payment/payment?amount=' + this.data.amount,
-    })
+    if (this.data.shoppingcartlist.length > 0){
+      wx.navigateTo({
+        url: '../payment/payment?amount=' + this.data.amount,
+      })
+    }
   },
   inputcode: function () {
     wx.navigateTo({

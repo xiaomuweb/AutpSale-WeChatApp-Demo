@@ -1,0 +1,48 @@
+<!--pages/home/index.wxml-->
+<view class='page-box'>
+  <view class='page-head-box'>
+    <view class='page-head-content' bindtap='jumpLocationList'>
+      <image class="page-head-content-image" src="../../resource/location_image.png"></image>
+      {{address}}
+    </view>
+  </view>
+  <view class='page-center-box'>
+    <text class="page-center-warning-title">请选择正确地址</text>
+    <view class='page-center-logo-box'>
+      <view class='page-center-logo'>
+        <image class='page-center-logo-image' src='../../resource/logo_image.png'></image>
+      </view>
+    </view>
+    <view class='page-center-progress-box'>
+      <view class='page-center-progress'>
+        <image class='page-center-progress-image' src='../../resource/liucheng.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='page-bottomarea-box'>
+    <view class='page-bottomarea-toparea'>
+      <view class="page-bottomarea-scannerbutton" ontap="scanner">
+        <image src='../../resource/scannercode_image.png' class='page-scannerbutton-image'></image>
+        <text class='page-scannerbutton-title'>扫码</text>
+      </view>
+    </view>
+    <view class='page-bottomarea-bottomarea'>
+      <view class='page-shoppingcart-box'>
+        <view class='page-shoppingcart'>
+          <view class='page-shoppingcart-content'>
+            <image class='page-shoppingcart-image' src='../../resource/shoppingcart_image.png' bindtap='jumpToShoppingcart'></image>
+            <text class='page-shoppingcart-title'>购物车</text>
+          </view>
+        </view>
+      </view>
+      <view class='page-personal-box'>
+        <view class='page-personal'>
+          <view class='page-personal-content'>
+            <image class='page-personal-image' src='../../resource/personal_image.png' bindtap='jumpToPersonalCenter'></image>
+            <text class='page-personal-title'>个人中心</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

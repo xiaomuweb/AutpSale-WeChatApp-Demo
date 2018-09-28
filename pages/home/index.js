@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/home/index.js
 const app = getApp()
 Page({
 
@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    address:'请选择地址'
+    address: '请选择地址'
   },
 
   /**
@@ -15,7 +15,7 @@ Page({
   onLoad: function (options) {
     this.loadAddress();
   },
-  loadAddress:function(){
+  loadAddress: function () {
     // app 的 地址是否已经加载
     if (app.globalData.address) {
       // 已经加载 赋值
@@ -80,15 +80,15 @@ Page({
   onShareAppMessage: function () {
 
   },
-  scanner:function(){
+  scanner: function () {
     wx.navigateTo({
       url: '../cart/cart?startScanner=true',
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
     })
   },
-  jumpToShoppingcart:function(){
+  jumpToShoppingcart: function () {
     wx.navigateTo({
       url: '../cart/cart?startScanner=false',
       success: function (res) { },
@@ -96,7 +96,7 @@ Page({
       complete: function (res) { },
     })
   },
-  jumpLocationList:function(){
+  jumpLocationList: function () {
     console.log("跳转地址列表");
     wx.navigateTo({
       url: '../location/location',
@@ -105,7 +105,7 @@ Page({
       complete: function (res) { },
     })
   },
-  jumpToPersonalCenter:function(){
+  jumpToPersonalCenter: function () {
     console.log("跳转订单列表");
     wx.navigateTo({
       url: '../personalCenter/personal',

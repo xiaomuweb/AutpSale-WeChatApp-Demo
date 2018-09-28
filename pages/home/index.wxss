@@ -1,0 +1,164 @@
+/* pages/home/index.wxss */
+/* page 背景 */
+.page-box{
+  /* 生成固定定位的元素，相对于浏览器窗口进行定位。 */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(250, 250, 250);
+  display: flex;
+  flex-direction: column;
+}
+/* 头部 */
+.page-head-box{
+  padding:5px 5px;
+  text-align: center;
+  background: white;
+  height: 5%;
+}
+/* 头部内容区 */
+.page-head-content{
+  padding:3px 10px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(216, 216, 247),rgb(71, 71, 241));
+  border-radius: 15px;
+  display: inline;
+  color: white;
+  font-size: 14px;
+}
+/* 头部内容图片 */
+.page-head-content-image{
+  width:14px;
+  height:14px;
+  margin-right: 5px;
+}
+/* 中部logo 和 流程 图片 */
+.page-center-box{
+  padding: 10px;
+  height: 45%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+/* 提示语 */
+.page-center-warning-title{
+  font-size: 11px;
+  color: gray;
+}
+/* logo */
+.page-center-logo-box{
+  height: 40%;
+  display: table;
+}
+.page-center-logo{
+  display: table-cell;
+  vertical-align: middle;
+}
+.page-center-logo-image{
+  width: 120px;
+  height: 40px;
+}
+/* 流程图片 */
+.page-center-progress-box{
+  height: 40%;
+  display: table;
+}
+.page-center-progress{
+  display: table-cell;
+  vertical-align: middle;
+}
+.page-center-progress-image{
+  height: 50px;
+}
+/* 底部区域 扫描按钮/购物车按钮/个人中心按钮 */
+.page-bottomarea-box{
+  background: white;
+  height: 50%;
+  align-items: center;
+  border-top-left-radius: 50% 30%;
+  border-top-right-radius: 50% 30%;
+  margin-top: 40px;
+}
+/* 扫描按钮 */
+.page-bottomarea-toparea{
+  width: 100%;
+  height: 65%;
+  align-items: center;
+}
+.page-bottomarea-scannerbutton{
+  margin: 10px auto;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to right, rgb(216, 216, 247),rgb(71, 71, 241));
+  align-items: center;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.page-scannerbutton-image{
+  height: 50px;
+  width: 50px;
+  margin: 15px auto 0px;
+}
+.page-scannerbutton-title{
+  height: 20px;
+  font-size: 14px;
+  color: white;
+}
+/* 购物车按钮/个人中心按钮 */
+.page-bottomarea-bottomarea{
+  height: 35%;
+  display: float;
+}
+/* 购物车按钮 */
+.page-shoppingcart-box{
+  height: 100%;
+  width: 80px;
+  float: left;
+  display: table;
+  text-align: center;
+}
+.page-shoppingcart{
+  display: table-cell;
+  vertical-align: middle;
+  align-items: center;
+}
+.page-shoppingcart-content{
+  display: flex;
+  flex-direction: column;
+}
+.page-shoppingcart-image{
+  margin: 0px auto;
+  height: 30px;
+  width: 30px;
+}
+.page-shoppingcart-title{
+  font-size: 12px;
+  color: #4A5CE9;
+}
+/* 个人中心按钮 */
+.page-personal-box{
+  height: 100%;
+  width: 80px;
+  float: right;
+  display: table;
+  text-align: center;
+}
+.page-personal{
+  display: table-cell;
+  vertical-align: middle;
+  align-items: center;
+}
+.page-personal-content{
+  display: flex;
+  flex-direction: column;
+}
+.page-personal-image{
+  margin: 0px auto;
+  height: 30px;
+  width: 30px;
+}
+.page-personal-title{
+  font-size: 12px;
+  color: #4A5CE9;
+}

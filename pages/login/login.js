@@ -113,7 +113,7 @@ Page({
   jumpToHomePage:function(){
     timer = setTimeout(function () {
       wx.redirectTo({
-        url: '../home/home',
+        url: '../home/index',
       })
     }, 2000);
   }
